@@ -1,29 +1,26 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>AR UF Test</title>
-    <script src="https://aframe.io/releases/1.4.2/aframe.min.js"></script>
-    <script src="https://raw.githack.com/AR-js-org/AR.js/3.3.2/aframe/build/aframe-ar.js"></script>
-  </head>
-  <body style="margin:0; overflow:hidden;">
-    <a-scene embedded arjs="sourceType: webcam; debugUIEnabled: false;">
-      
-      <!-- Hiro-markör -->
-      <a-marker preset="hiro">
-        <a-text 
-          value="✅ Test! Text visas!" 
-          color="red" 
-          align="center"
-          position="0 0.5 0" 
-          scale="2 2 2">
+<head>
+  <title>AR UF Västervik Guide</title>
+  <script src="https://aframe.io/releases/1.4.2/aframe.min.js"></script>
+  <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar.js"></script>
+</head>
+<body style="margin:0; overflow:hidden;">
+  <a-scene embedded arjs="sourceType: webcam; debugUIEnabled: false;">
+
+    <!-- Hiro marker -->
+    <a-marker preset="hiro">
+      <a-entity position="0 0 0.5">
+        <!-- Rubrik -->
+        <a-text value="🌊 Välkommen till Västervik!" color="orange" align="center" scale="2 2 2" position="0 0.2 0"></a-text>
+        <!-- Kort info -->
+        <a-text value="Västervik är en mysig stad vid kusten.\nKänd för skärgården och sommaraktiviteter.\nUpptäck restauranger, caféer och sevärdheter!" 
+                color="blue" align="center" scale="1.5 1.5 1.5" position="0 -0.2 0">
         </a-text>
-      </a-marker>
+      </a-entity>
+    </a-marker>
 
-      <a-entity camera></a-entity>
-    </a-scene>
-  </body>
+    <a-entity camera></a-entity>
+  </a-scene>
+</body>
 </html>
-
-
-
-
