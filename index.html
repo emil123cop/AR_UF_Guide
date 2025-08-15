@@ -5,24 +5,45 @@
     <script src="https://aframe.io/releases/1.4.2/aframe.min.js"></script>
     <script src="https://raw.githack.com/AR-js-org/AR.js/3.3.2/aframe/build/aframe-ar.js"></script>
   </head>
-  <body style="margin: 0; overflow: hidden;">
-    <a-scene embedded arjs='sourceType: webcam; debugUIEnabled: false;'>
-
+  <body style="margin:0; overflow:hidden;">
+    <a-scene embedded arjs="sourceType: webcam; debugUIEnabled: false;">
+      
+      <!-- Hiro-markör -->
       <a-marker preset="hiro">
+
+        <!-- Titel -->
         <a-text 
-          value="Välkommen till Gamla Stan!" 
-          color="red" 
+          value="🌟 Välkommen till vårt UF-projekt!" 
+          color="orange" 
+          position="0 0.2 0" 
+          rotation="-90 0 0" 
+          scale="1.5 1.5 1.5">
+        </a-text>
+
+        <!-- Info 1 -->
+        <a-text 
+          value="Vi skapar en AR-guide för turister.\nDen visar info om platser, restauranger och mer." 
+          color="blue" 
           position="0 0 0" 
           rotation="-90 0 0" 
-          scale="2 2 2">
+          scale="1.2 1.2 1.2">
         </a-text>
+
+        <!-- Info 2 -->
+        <a-text 
+          value="📌 Markören 'Hiro' används för att aktivera texten.\nBara rikta mobilen mot den!" 
+          color="green" 
+          position="0 -0.2 0" 
+          rotation="-90 0 0" 
+          scale="1 1 1">
+        </a-text>
+
       </a-marker>
 
       <a-entity camera></a-entity>
     </a-scene>
   </body>
 </html>
-
 
 
 
