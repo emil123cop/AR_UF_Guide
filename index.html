@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>AR UF Guide</title>
+    <title>AR UF Test</title>
     <script src="https://aframe.io/releases/1.4.2/aframe.min.js"></script>
     <script src="https://raw.githack.com/AR-js-org/AR.js/3.3.2/aframe/build/aframe-ar.js"></script>
   </head>
@@ -10,31 +10,20 @@
       
       <!-- Hiro-markör -->
       <a-marker preset="hiro">
-
-        <!-- Text som alltid är synlig -->
-        <a-entity position="0 0 0.5"> <!-- lägg texten 0.5 meter framför markören -->
-          
-          <a-text value="🌟 Välkommen till vårt UF-projekt!" 
-                  color="orange" 
-                  align="center"
-                  position="0 0.1 0"
-                  scale="2 2 2">
-          </a-text>
-
-          <a-text value="Vi skapar en AR-guide för turister.\nDen visar info om platser, restauranger och mer." 
-                  color="blue" 
-                  align="center"
-                  position="0 -0.1 0"
-                  scale="1.5 1.5 1.5">
-          </a-text>
-
-        </a-entity>
-
+        <a-text 
+          value="✅ Test! Text visas!" 
+          color="red" 
+          align="center"
+          position="0 0.5 0" 
+          scale="2 2 2">
+        </a-text>
       </a-marker>
 
       <a-entity camera></a-entity>
     </a-scene>
   </body>
 </html>
+
+
 
 
