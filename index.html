@@ -11,32 +11,24 @@
       <!-- Hiro-markör -->
       <a-marker preset="hiro">
 
-        <!-- Titel -->
-        <a-text 
-          value="🌟 Välkommen till vårt UF-projekt!" 
-          color="orange" 
-          position="0 0.2 0" 
-          rotation="-90 0 0" 
-          scale="1.5 1.5 1.5">
-        </a-text>
+        <!-- Text som alltid är synlig -->
+        <a-entity position="0 0 0.5"> <!-- lägg texten 0.5 meter framför markören -->
+          
+          <a-text value="🌟 Välkommen till vårt UF-projekt!" 
+                  color="orange" 
+                  align="center"
+                  position="0 0.1 0"
+                  scale="2 2 2">
+          </a-text>
 
-        <!-- Info 1 -->
-        <a-text 
-          value="Vi skapar en AR-guide för turister.\nDen visar info om platser, restauranger och mer." 
-          color="blue" 
-          position="0 0 0" 
-          rotation="-90 0 0" 
-          scale="1.2 1.2 1.2">
-        </a-text>
+          <a-text value="Vi skapar en AR-guide för turister.\nDen visar info om platser, restauranger och mer." 
+                  color="blue" 
+                  align="center"
+                  position="0 -0.1 0"
+                  scale="1.5 1.5 1.5">
+          </a-text>
 
-        <!-- Info 2 -->
-        <a-text 
-          value="📌 Markören 'Hiro' används för att aktivera texten.\nBara rikta mobilen mot den!" 
-          color="green" 
-          position="0 -0.2 0" 
-          rotation="-90 0 0" 
-          scale="1 1 1">
-        </a-text>
+        </a-entity>
 
       </a-marker>
 
@@ -44,6 +36,5 @@
     </a-scene>
   </body>
 </html>
-
 
 
