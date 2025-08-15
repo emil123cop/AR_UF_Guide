@@ -1,47 +1,42 @@
 <!DOCTYPE html>
-<html lang="sv">
-<head>
-  <meta charset="UTF-8">
-  <title>AR Turistguide</title>
-  <!-- Ladda A-Frame för AR -->
-  <script src="https://aframe.io/releases/1.4.0/aframe.min.js"></script>
-  <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar.js"></script>
+<html>
+  <head>
+    <title>AR UF Guide</title>
+    <script src="https://aframe.io/releases/1.4.2/aframe.min.js"></script>
+    <script src="https://raw.githack.com/AR-js-org/AR.js/3.3.2/aframe/build/aframe-ar.js"></script>
+  </head>
+  <body style="margin: 0; overflow: hidden;">
+    <a-scene embedded arjs>
+      <!-- Marker -->
+      <a-marker preset="hiro">
+        <!-- Text -->
+        <a-text 
+          value="Välkommen till Gamla Stan!" 
+          color="red" 
+          position="0 0.5 0" 
+          rotation="0 0 0" 
+          scale="2 2 2">
+        </a-text>
 
-  <!-- Ladda Leaflet för kartor -->
-  <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
-  <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+        <!-- Bild -->
+        <a-image 
+          src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/63/Stockholm_old_town.jpg/320px-Stockholm_old_town.jpg" 
+          position="0 0 0" 
+          scale="1 1 1">
+        </a-image>
 
-  <style>
-    body, html { margin: 0; padding: 0; height: 100%; }
-    #map { width: 100%; height: 30%; }
-    a-scene { width: 100%; height: 70%; }
-  </style>
-</head>
-<body>
+        <!-- Extra info -->
+        <a-text 
+          value="Historisk plats, 1600-talet" 
+          color="blue" 
+          position="0 -0.8 0" 
+          scale="1.5 1.5 1.5">
+        </a-text>
+      </a-marker>
 
-  <!-- AR-del -->
-  <a-scene embedded arjs>
-    <a-marker preset="hiro">
-      <a-box position="0 0.5 0" material="color: red;"></a-box>
-    </a-marker>
-    <a-entity camera></a-entity>
-  </a-scene>
-
-  <!-- Karta -->
-  <div id="map"></div>
-
-  <script>
-    // Skapa Leaflet-karta
-    var map = L.map('map').setView([57.7089, 11.9746], 13); // Exempel: Göteborg
-    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-      attribution: '&copy; OpenStreetMap contributors'
-    }).addTo(map);
-
-    // Lägg till en markör
-    L.marker([57.7089, 11.9746]).addTo(map)
-      .bindPopup('Här är en intressant plats!')
-      .openPopup();
-  </script>
-
-</body>
+      <!-- Kamera -->
+      <a-entity camera></a-entity>
+    </a-scene>
+  </body>
 </html>
+
